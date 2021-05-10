@@ -20,7 +20,7 @@ import React, {useState} from 'react';
 const listOfSquareIds = ['sqA', 'sqB', 'sqC', 'sqD'];
 
 export default function Squares() {
-  const [squares, setSquares] = useState(listOfSquareIds)
+  const [squares] = useState(listOfSquareIds)
   const [activeSquare, setActiveSquare] = useState(null)
   
   // Use the state hook twice, as we need two slices of state: 'squares' and
@@ -29,7 +29,6 @@ export default function Squares() {
   // so the value of 'activeSquare' should be null.
 
   const getClassName = id => {
-    console.log(id)
     // This is NOT a click handler but a helper, used inside the JSX (see below).
     // It should return a string containing the class name of 'active', if the id passed
     // as the argument matches the active square in state, empty string otherwise.

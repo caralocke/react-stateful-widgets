@@ -49,7 +49,7 @@ STEP 6:
 
 import React, {useState} from 'react'; /* STEP 0 */
 
-export default function Counter(props) {
+export default function Counter() {
   const [count, setCount] = useState(0) /* STEP 1 */
 
   const increment = () => {
